@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- 创建vue容器 -->
+    <div id="app">
+        <h1>{{msg}}</h1>
+    </div>
+    <!-- 编写vue代码 -->
+    <script>
+       
+        new Vue({
+            el: '#app',
+            data : {
+                msg : 'msg',
+            }
+        });
+    </script>
+    
+</body>
+</html>

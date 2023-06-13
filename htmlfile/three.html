@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../js/vue.js"></script>
+<body>
+    <div id="app">
+        <h1>{{name}}</h1>
+        <h2>{{sayHello()}}</h2>
+        <!-- JavaScript表达式 -->
+        <h1>{{gender?'男':'女'}}</h1>
+        <!-- {{可以写什么}} 
+            1.在data里声明的变量，函数
+            2.常量
+            3.JavaScript表达式
+            4.白名单里面的
+        -->
+    </div>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data : {
+                gender : true,
+                name : 'zhangsan',
+                sayHello : function(){
+                    console.log('sayHello');
+                } 
+            }
+        });
+    </script>
+</body>
+</html>

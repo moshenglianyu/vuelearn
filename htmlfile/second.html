@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板语句的数据来源</title>
+</head>
+<script src="../js/vue.js"></script>
+<body>
+    <div id="app"></div>
+    <script>
+        new Vue({
+            template: `<h1>电视剧{{releasetime}},时间{{name}},lead是{{lead.text}},{{lead.type}}
+                ,,,,{{methods[0].type}},,,,,{{methods[1].url}}
+                </h1>`,
+            data: {
+           // declare message with an empty value
+           releasetime : '2023年',
+           name : '你好啊23!',
+           lead : {
+             text : '模板语句的数据来源!!!',
+             type :'老杜!!!'
+           },
+           methods: [
+            {
+                type : 'GET',
+                url: 'http://www.baidu.com',
+            },
+            {
+                type : 'ppppT',
+                url: 'http://www.c.com',
+            }
+           ]
+         },
+        }).$mount("#app")
+    </script>
+    
+</body>
+</html>
