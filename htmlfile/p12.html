@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+    <!-- v-bind指令的使用教程 
+        v-bind的简写方式
+        <img :src="imgPath"><br>
+    -->
+
+    <!-- 什么是使用标签，什么时候使用插值语法
+        在标签体内使用插值语法，
+        在属性处使用指令。
+     -->
+</head>
+<body>
+    <div id="app">
+        <img v-bind:src="imgPath"><br>
+    </div>
+    
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data : {
+                imgPath : '../img/1.jpg'
+            } 
+            
+        });
+    </script>
+</body>
+</html>
