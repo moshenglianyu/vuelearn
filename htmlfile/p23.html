@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<!-- 事件绑定学习
+    语法：
+    v-on:click="表达式"，表示当事件发生后，执行表达式
+
+    在Vue中，所有事件所关联的回调函数，必须要通过vue配置项中的methods定义
+
+    vue在调用回调函数时，会自动传入一个对象，这个对象就是当前发生的事件对象
+
+    在绑定回调函数时，可以用$event占位符，vue看到这个占位符之后，会自动将当前事件以
+    对象的形式传递
+ -->
+
+<body>
+
+    <div id="app">
+        <h1>{{msg}}</h1>
+        <button onclick="console.log('点击事件发生了');">按钮</button>
+        <button v-on:click="sayHello()">vue的事件绑定</button>
+        <!-- 简写形式 -->
+        <button @click="sayHi()">vue的事件绑定</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data : {
+                msg : 'Hello',
+            },
+            methods : {
+                // : function可以省略
+                sayHello : function(){
+                    alert('Hello')
+                },
+
+                sayHi : function(){
+                    alert('Hi')
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>
